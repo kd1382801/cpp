@@ -9,6 +9,8 @@ public:
 	virtual ~Ambulance();
 	//‹~‹}‹~–½Šˆ“®
 	void sevePeople();
+	
+	void drive(double hour);
 private:
 	int m_number;
 };
