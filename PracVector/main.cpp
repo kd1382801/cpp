@@ -3,18 +3,30 @@
 
 using namespace std;
 
-void compare(int& max, int& min, int data) {
-	if (data > max) {
+//参照渡し
+void compare(int& max, int& min, const int& data) {
+	/*if (data > max) {
 		max = data;
 	}
 	if (data < min) {
 		min = data;
-	}
+	}*/
+
+	//条件演算子を使った書き方
+	max = data > max ? data : max;
+	min = data < min ? data : min;
+	
 }
 
 int main() {
 	vector<int> vec{ 20,11,9,33,40,25 };
 	int max, min;
+
+	//ループを使わない
+	cout << "max_element,min_element" << endl;
+	max = *max_element(vec.begin(), vec.end());//戻り値:最大値のイテレータ
+	min = *min_element(vec.begin(), vec.end());
+	cout << "最大値:" << max << " " << "最小値:" << min << endl;
 
 	//添え字の番号を使ったループ
 	max = vec[0];
