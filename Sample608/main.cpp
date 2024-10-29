@@ -32,5 +32,17 @@ int main() {
 		cout << "Mike‚Ì“_”:" << score["Mike"] << endl;
 	}
 
+	/*for (auto itr = score.begin(); itr != score.end(); itr++) {
+		cout << "Key: " << itr->first << " Value: " << itr->second << endl;
+	}*/
+
+	/*for (auto p : score) {
+		cout << "Key: " << p.first << " Value: " << p.second << endl;
+	}*/
+	
+	for (auto& [key,value] : score) {
+		cout << "Key: " << key << " Value: " << value << endl;
+	}
+
 	return 0;
 }
