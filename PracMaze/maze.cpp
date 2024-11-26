@@ -3,7 +3,7 @@
 MapData::MapData() = default;
 
 int MapData::getMapValue(int x, int y) {
-	return MapData[y][x];
+	return mapData[y][x];
 }
 
 int MapData::getMapSize(int i) {
@@ -14,14 +14,14 @@ int MapData::getMapSize() {
 	return mapData.size();
 }
 
-int MapData::addMap(int j, int value) {
+void MapData::addMap(int j, int value) {
 	mapData[j].push_back(value);
 }
 
-int MapData::resizeMap() {
+void MapData::resizeMap() {
 	mapData.resize(mapData.size() + 1);
 }
 
-int MapData::setMapValue(int x, int y, int value) {
+void MapData::setMapValue(int x, int y, int value) {
 	mapData[y][x] = value;
 }
